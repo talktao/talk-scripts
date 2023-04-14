@@ -1,13 +1,13 @@
 {
   "name": "talktao-scripts",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "custom scripts for cra's react scripts",
   "keywords": [
     "custom",
     "react",
     "scripts"
   ],
-  "author": "talktao<t1416249906@163.com>",
+  "author": "talktao <t1416249906@163.com>",
   "homepage": "",
   "license": "ISC",
   "repository": {
