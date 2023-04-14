@@ -21,8 +21,8 @@ function getCDNModules() {
         return [
             { name: 'react', _var: 'React', path: `umd/react.${cdnEnv}.js` },
             { name: 'react-dom', _var: 'ReactDOM', path: `umd/react-dom.${cdnEnv}.js` },
-            { name: 'ahooks', _var: 'ahooks', path: `https://cdn.jsdelivr.net/npm/ahooks@3.7.6/dist/ahooks.min.js` },
-            { name: '@remix-run/router', _var: '@remix-run/router', path: `https://cdn.jsdelivr.net/npm/@remix-run/router@1.5.0/dist/router.umd.min.js` },
+            { name: 'ahooks', _var: 'ahooks', path: `https://require.mp.sztv.com.cn/cdn/ahooks.js` },
+            { name: '@remix-run/router', _var: '@remix-run/router', path: `https://require.mp.sztv.com.cn/cdn/router.umd.min.js` },
             { name: 'react-router', _var: 'ReactRouter', path: `react-router.${cdnEnv}.js` },
             { name: 'react-router-dom', _var: 'ReactRouterDOM', path: `react-router-dom.${cdnEnv}.js` },
             { name: 'mobx', _var: 'mobx', path: `mobx.umd.${cdnEnv}.js` },

@@ -24,7 +24,8 @@ function validateKeyAndCerts({ cert, key, keyFile, crtFile }) {
     crypto.privateDecrypt(key, encrypted);
   } catch (err) {
     throw new Error(
-      `The certificate key "${chalk.yellow(keyFile)}" is invalid.\n${err.message
+      `The certificate key "${chalk.yellow(keyFile)}" is invalid.\n${
+        err.message
       }`
     );
   }

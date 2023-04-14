@@ -25,6 +25,7 @@ const publicUrlOrPath = getPublicUrlOrPath(
 const buildPath = process.env.BUILD_PATH || 'build';
 
 const moduleFileExtensions = [
+  'tsx',
   'web.mjs',
   'mjs',
   'web.js',
@@ -32,7 +33,6 @@ const moduleFileExtensions = [
   'web.ts',
   'ts',
   'web.tsx',
-  'tsx',
   'json',
   'web.jsx',
   'jsx',
@@ -51,10 +51,9 @@ const resolveModule = (resolveFn, filePath) => {
   return resolveFn(`${filePath}.js`);
 };
 
-// 多页面打包
 const fliterModules = (() => {
   const index = process.argv.findIndex(i => i === '--multiPage');
-
+  
   if (index === process.argv.length - 1) {
     return [];
   } else {
@@ -65,7 +64,7 @@ const fliterModules = (() => {
 const entriesPath = globby.sync([resolveApp('src/pages') + '/*/index.tsx']).map(filePath => {
   let tmp = filePath.split('/');
   let name = tmp[tmp.length - 2];
-  return { path: filePath, name };
+  return {path: filePath, name}
 }).filter(i => {
 
   if (fliterModules.length === 0) return true;
@@ -83,7 +82,9 @@ module.exports = {
   appIndexJs: resolveModule(resolveApp, 'src/index'),
   appPackageJson: resolveApp('package.json'),
   appSrc: resolveApp('src'),
+  appSrcPages: resolveApp('src/pages'),
   appTsConfig: resolveApp('tsconfig.json'),
+  appTsPathConfig: resolveApp('tsconfig.paths.json'),
   appJsConfig: resolveApp('jsconfig.json'),
   yarnLockFile: resolveApp('yarn.lock'),
   testsSetup: resolveModule(resolveApp, 'src/setupTests'),
@@ -96,6 +97,7 @@ module.exports = {
   entriesPath,
   multiPage: require(resolveApp('package.json')).multiPage || process.argv.includes('--multiPage'),
 };
+
 
 
 module.exports.moduleFileExtensions = moduleFileExtensions;

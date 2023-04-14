@@ -1,25 +1,28 @@
 {
   "name": "talktao-scripts",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "custom scripts for cra's react scripts",
   "keywords": [
     "custom",
     "react",
     "scripts"
   ],
-  "author": "talktao <t1416249906@163.com>",
+  "author": "talktao <他416249906@163.com>",
   "homepage": "",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/talktao/talktao-scripts"
-  },
   "bin": {
     "talktao-scripts": "./bin/talktao-scripts.js"
   },
   "types": "./lib/react-app.d.ts",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talktao/talktao-scripts"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
     "@babel/core": "^7.16.0",

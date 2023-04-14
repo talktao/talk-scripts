@@ -113,8 +113,8 @@ function getJestAliases(options = {}, pathOptions = {}) {
 function getModules() {
   // Check if TypeScript is setup
   const hasTsConfig = fs.existsSync(paths.appTsConfig);
-  const hasJsConfig = fs.existsSync(paths.appJsConfig);
   const hasTsPathsConfig = fs.existsSync(paths.appTsPathConfig);
+  const hasJsConfig = fs.existsSync(paths.appJsConfig);
 
   if (hasTsConfig && hasJsConfig) {
     throw new Error(
@@ -124,6 +124,7 @@ function getModules() {
 
   let config;
   let pathConfig;
+
 
   // If there's a tsconfig.json we assume it's a
   // TypeScript project and set up the config
