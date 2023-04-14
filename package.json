@@ -1,6 +1,6 @@
 {
   "name": "talk-scripts",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "custom scripts for cra's react scripts",
   "keywords": [
     "custom",
@@ -11,7 +11,7 @@
   "homepage": "https://github.com/talktao/talk-scripts#readme",
   "license": "ISC",
   "bin": {
-    "talktao-scripts": "bin/talk-scripts.js"
+    "talk-scripts": "bin/talk-scripts.js"
   },
   "types": "./lib/react-app.d.ts",
   "publishConfig": {
@@ -86,7 +86,7 @@
     "workbox-webpack-plugin": "^6.4.1"
   },
   "bugs": {
-    "url": "https://github.com/talktao/talktao-scripts/issues"
+    "url": "https://github.com/talktao/talk-scripts/issues"
   },
   "main": "index.js",
   "directories": {
