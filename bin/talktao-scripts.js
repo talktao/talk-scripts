@@ -48,6 +48,6 @@ if (['build', 'start', 'test'].includes(script)) {
   console.log('Unknown script "' + script + '".');
   console.log('Perhaps you need to update react-scripts?');
   console.log(
-    'See: https://github.com/talktao/talktao-scripts'
+    'See: https://github.com/talktao/talk-scripts'
   );
 }
