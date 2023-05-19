@@ -25,8 +25,8 @@ function getCDNModules() {
             { name: '@remix-run/router', _var: '@remix-run/router', path: `https://cdn.jsdelivr.net/npm/@remix-run/router@1.3.2/dist/router.umd.min.js` },
             { name: 'react-router', _var: 'ReactRouter', path: `react-router.${cdnEnv}.js` },
             { name: 'react-router-dom', _var: 'ReactRouterDOM', path: `react-router-dom.${cdnEnv}.js` },
-            { name: 'mobx', _var: 'mobx', path: `mobx.umd.${cdnEnv}.js` },
-            { name: 'mobx-react-lite', _var: 'mobxReactLite', path: `mobxreactlite.umd.${cdnEnv}.js` },
+            { name: 'mobx', _var: 'mobx', path: `mobx.umd.${cdnEnv}.min.js` },
+            { name: 'mobx-react-lite', _var: 'mobxReactLite', path: `mobxreactlite.umd.${cdnEnv}.min.js` },
             { name: 'axios', _var: 'axios', path: `axios.js` },
         ].filter(i => !ignoresCdnPackage.includes(i.name));
     }
